@@ -1,7 +1,6 @@
 import express from "express"
 import cors from "cors"
 import bodyParser from "body-parser"
-import { readFileSync } from "fs"
 import ApiController from "./apiCrl"
 
 const controller = new ApiController()
@@ -13,11 +12,14 @@ app.use(bodyParser.json())
 app.use(cors())
 
 app.route("/api")
-    .get(controller.getListTodo)
+    .get(controller.authenticateToken, controller.getListTodo)
     .post(urlEncodedParser, controller.postData)
 
 app.route("/api/:listId")
-    .get(controller.getList)    
+    .get(controller.getList)   
+    
+app.route("/login")
+    .post(urlEncodedParser, controller.login)    
 
 const PORT: number = 2500
 
