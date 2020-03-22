@@ -10,15 +10,20 @@
     "get": "ts-node test/get.ts",
     "getList": "ts-node test/getList.ts"
   },
-  "dependencies": {
+  "devDependencies": {
     "@types/body-parser": "^1.19.0",
     "@types/cors": "^2.8.6",
     "@types/express": "^4.17.3",
+    "@types/jsonwebtoken": "^8.3.8",
     "@types/node-fetch": "^2.5.5",
-    "@types/request-promise": "^4.1.46",
+    "@types/request-promise": "^4.1.46"
+  },
+  "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "node-fetch": "^2.6.0",
     "request": "^2.88.2",
     "request-promise": "^4.2.5",
