@@ -11,6 +11,9 @@ $ yarn build
 ```
 ### End point:
 ```
+register:
+POST:/ localhost:2500/register
+
 login: 
 POST:/ localhost:2500/login
 
@@ -24,8 +27,9 @@ add item
 POST:/ localhost:2500/api
 
 run test:
-$ yarn login
-$ yarn get
-$ yarn getList
-$ yarn post
+$ yarn test-register
+$ yarn test-login
+$ yarn test-get
+$ yarn test-getList
+$ yarn test-post
 ```
