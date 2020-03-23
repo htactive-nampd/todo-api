@@ -16,11 +16,14 @@ app.route("/api")
     .post(urlEncodedParser, controller.postData)
 
 app.route("/api/:listId")
-    .get(controller.getList)   
+    .get(controller.authenticateToken, controller.getList)   
     
 app.route("/login")
-    .post(urlEncodedParser, controller.login)    
+    .post(urlEncodedParser, controller.login.bind(controller))    
 
+app.route("/register")
+    .post(urlEncodedParser, controller.register)
+    
 const PORT: number = 2500
 
 app.listen(PORT, () => {console.log("listening on port" + PORT) })
