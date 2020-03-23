@@ -1,14 +1,13 @@
 import fetch from "node-fetch"
 
-fetch("http://localhost:2500/login", {
+fetch("http://localhost:2500/register", {
     method: "POST",
     headers: {
-        'Accept': 'application/json, text/plain, */*',
         'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-        "username": "uuw",
-        "password": "owo"
+        username: "uuw",
+        password: "owo"
     })
 })
 .then(data => data.json())
