@@ -6,9 +6,11 @@
   "scripts": {
     "build": "tsc api.ts",
     "start": "ts-node api.ts",
-    "post": "ts-node test/post.ts",
-    "get": "ts-node test/get.ts",
-    "getList": "ts-node test/getList.ts"
+    "test-post": "ts-node test/post.ts",
+    "test-get": "ts-node test/get.ts",
+    "test-getList": "ts-node test/getList.ts",
+    "test-register": "ts-node test/register.ts",
+    "test-login": "ts-node test/login.ts"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.0",
